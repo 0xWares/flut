@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
 class ActionButton extends StatefulWidget {
-  const ActionButton({Key? key}) : super(key: key);
+  const ActionButton({super.key});
 
   @override
   State<ActionButton> createState() => _ActionButtonState();
 }
 
 class _ActionButtonState extends State<ActionButton> {
-  bool _isPressed = false;
   int i = 0;
 
   @override
@@ -25,7 +24,6 @@ class _ActionButtonState extends State<ActionButton> {
       floatingActionButton: Container(
         margin: EdgeInsets.only(bottom: 10),
         child: FloatingActionButton(
-          child: Icon(Icons.add),
           backgroundColor: Colors.blue,
           foregroundColor: Colors.white,
           onPressed: () {
@@ -33,6 +31,7 @@ class _ActionButtonState extends State<ActionButton> {
               i++;
             });
           },
+          child: Icon(Icons.add),
         ),
       ),
     );

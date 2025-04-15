@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'metlist.dart';
+import '../metlist.dart';
 
 class Bar extends StatelessWidget {
-  const Bar({Key? key}) : super(key: key);
+  const Bar({super.key});
 
   @override
   Widget build(BuildContext context) {

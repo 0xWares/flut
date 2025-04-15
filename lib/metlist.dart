@@ -1,9 +1,13 @@
+import 'package:flut/widgets/custom_row_widget.dart';
+
 import 'package:flutter/material.dart';
-import 'bar.dart';
-import 'actionbutton.dart';
-import 'drawerscreen.dart';
+import 'dirs/bar.dart';
+import 'dirs/actionbutton.dart';
+import 'dirs/btmnavbar.dart';
 
 class Metlist extends StatelessWidget {
+  const Metlist({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,336 +37,34 @@ class Metlist extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Column(
-                    children: [
-                      InkWell(
-                        child: Container(
-                          width: 200,
-                          height: 200,
-
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: const Color.fromARGB(255, 224, 165, 56),
-                          ),
-                          child: Center(
-                            child: Text(
-                              "App Bar",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white70,
-                              ),
-                            ),
-                          ),
-                        ),
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Bar()),
-                          );
-                        },
-                      ),
-                    ],
-                  ),
-                  SizedBox(width: 30),
-                  InkWell(
-                    child: Column(
-                      children: [
-                        Container(
-                          width: 200,
-                          height: 200,
-
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: const Color.fromARGB(255, 69, 135, 233),
-                          ),
-                          child: Center(
-                            child: Text(
-                              "Floating Action Button",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white70,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => ActionButton()),
-                      );
-                    },
-                  ),
-                ],
+              SizedBox(height: 5),
+              CustomRowWidget(
+                txt1: "App Bar",
+                clr1: Colors.redAccent,
+                link1: Bar(),
+                txt2: "Floating Action Button",
+                clr2: Colors.tealAccent,
+                link2: ActionButton(),
+              ),
+              SizedBox(height: 5),
+              CustomRowWidget(
+                txt1: "Bottom Navigation Bar",
+                clr1: Colors.teal,
+                link1: Btmnavbar(),
+                txt2: "Action Button",
+                clr2: Colors.purple,
+                link2: ActionButton(),
+              ),
+              SizedBox(height: 5),
+              CustomRowWidget(
+                txt1: "App Bar",
+                clr1: Colors.redAccent,
+                link1: Bar(),
+                txt2: "Floating Action Button",
+                clr2: Colors.tealAccent,
+                link2: ActionButton(),
               ),
               SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  InkWell(
-                    child: Column(
-                      children: [
-                        Container(
-                          width: 200,
-                          height: 200,
-
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: const Color.fromARGB(255, 137, 224, 56),
-                          ),
-                          child: Center(
-                            child: Text(
-                              "Drawer",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white70,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Drawerscreen()),
-                      );
-                    },
-                  ),
-                  SizedBox(width: 30),
-                  Column(
-                    children: [
-                      Container(
-                        width: 200,
-                        height: 200,
-
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: const Color.fromARGB(255, 56, 224, 210),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Sample text",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white70,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Column(
-                    children: [
-                      Container(
-                        width: 200,
-                        height: 200,
-
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: const Color.fromARGB(255, 56, 224, 210),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Sample text",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white70,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(width: 30),
-                  Column(
-                    children: [
-                      Container(
-                        width: 200,
-                        height: 200,
-
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: const Color.fromARGB(255, 56, 224, 210),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Sample text",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white70,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Column(
-                    children: [
-                      Container(
-                        width: 200,
-                        height: 200,
-
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: const Color.fromARGB(255, 56, 224, 210),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Sample text",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white70,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(width: 30),
-                  Column(
-                    children: [
-                      Container(
-                        width: 200,
-                        height: 200,
-
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: const Color.fromARGB(255, 56, 224, 210),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Sample text",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white70,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Column(
-                    children: [
-                      Container(
-                        width: 200,
-                        height: 200,
-
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: const Color.fromARGB(255, 56, 224, 210),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Sample text",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white70,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(width: 30),
-                  Column(
-                    children: [
-                      Container(
-                        width: 200,
-                        height: 200,
-
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: const Color.fromARGB(255, 56, 224, 210),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Sample text",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white70,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Column(
-                    children: [
-                      Container(
-                        width: 200,
-                        height: 200,
-
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: const Color.fromARGB(255, 56, 224, 210),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Sample text",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white70,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(width: 30),
-                  Column(
-                    children: [
-                      Container(
-                        width: 200,
-                        height: 200,
-
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: const Color.fromARGB(255, 56, 224, 210),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Sample text",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white70,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
             ],
           ),
         ),
