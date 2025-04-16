@@ -1,3 +1,6 @@
+import 'package:flut/dirs/dialog.dart';
+import 'package:flut/dirs/search_field_widget.dart';
+import 'package:flut/dirs/signup.dart';
 import 'package:flut/widgets/custom_row_widget.dart';
 
 import 'package:flutter/material.dart';
@@ -57,14 +60,22 @@ class Metlist extends StatelessWidget {
               ),
               SizedBox(height: 5),
               CustomRowWidget(
-                txt1: "App Bar",
-                clr1: Colors.redAccent,
-                link1: Bar(),
-                txt2: "Floating Action Button",
+                txt1: "Dialog Box",
+                clr1: const Color.fromARGB(255, 105, 255, 163),
+                link1: DialogWidget(),
+                txt2: "Search Field",
                 clr2: Colors.tealAccent,
-                link2: ActionButton(),
+                link2: SearchFieldWidget(),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 5),
+              CustomRowWidget(
+                txt1: "Sign up page",
+                clr1: Colors.limeAccent,
+                link1: SignUpPage(),
+                txt2: "sadfj",
+                clr2: Colors.black45,
+                link2: Btmnavbar(),
+              ),
             ],
           ),
         ),
