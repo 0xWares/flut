@@ -1,6 +1,8 @@
 import 'package:flut/dirs/dialog.dart';
+
 import 'package:flut/dirs/search_field_widget.dart';
 import 'package:flut/dirs/signup.dart';
+import 'package:flut/display_counter.dart';
 import 'package:flut/widgets/custom_row_widget.dart';
 
 import 'package:flutter/material.dart';
@@ -72,9 +74,9 @@ class Metlist extends StatelessWidget {
                 txt1: "Sign up page",
                 clr1: Colors.limeAccent,
                 link1: SignUpPage(),
-                txt2: "sadfj",
-                clr2: Colors.black45,
-                link2: Btmnavbar(),
+                clr2: Colors.black,
+                link2: DisplayCounterPage(),
+                txt2: "Provider",
               ),
             ],
           ),

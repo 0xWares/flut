@@ -9,11 +9,13 @@ class SearchFieldWidget extends StatefulWidget {
 
 class _SearchFieldWidgetState extends State<SearchFieldWidget> {
   late TextEditingController searchController;
+  @override
   void initState() {
     super.initState();
     searchController = TextEditingController();
   }
 
+  @override
   void dispose() {
     searchController.dispose();
     super.dispose();
