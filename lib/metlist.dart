@@ -1,10 +1,10 @@
 import 'package:flut/dirs/dialog.dart';
-
 import 'package:flut/dirs/search_field_widget.dart';
 import 'package:flut/dirs/signup.dart';
-import 'package:flut/display_counter.dart';
+import 'package:flut/placeholder_widget.dart';
+import 'package:flut/stack_widget.dart';
+import 'package:flut/text_widget.dart';
 import 'package:flut/widgets/custom_row_widget.dart';
-
 import 'package:flutter/material.dart';
 import 'dirs/bar.dart';
 import 'dirs/actionbutton.dart';
@@ -75,8 +75,16 @@ class Metlist extends StatelessWidget {
                 clr1: Colors.limeAccent,
                 link1: SignUpPage(),
                 clr2: Colors.black,
-                link2: DisplayCounterPage(),
-                txt2: "Provider",
+                link2: TextWidget(),
+                txt2: "Rich Text",
+              ),
+              CustomRowWidget(
+                txt1: "Placeholder",
+                clr1: Colors.purple,
+                link1: PlaceholderWidget(),
+                txt2: "Stack",
+                clr2: Colors.brown,
+                link2: StackWidget(),
               ),
             ],
           ),
