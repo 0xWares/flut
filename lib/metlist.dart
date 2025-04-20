@@ -1,9 +1,9 @@
 import 'package:flut/dirs/dialog.dart';
+import 'package:flut/dirs/placeholder_widget.dart';
 import 'package:flut/dirs/search_field_widget.dart';
 import 'package:flut/dirs/signup.dart';
-import 'package:flut/placeholder_widget.dart';
-import 'package:flut/stack_widget.dart';
-import 'package:flut/text_widget.dart';
+import 'package:flut/dirs/stack_widget.dart';
+import 'package:flut/dirs/text_widget.dart';
 import 'package:flut/widgets/custom_row_widget.dart';
 import 'package:flutter/material.dart';
 import 'dirs/bar.dart';
