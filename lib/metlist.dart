@@ -1,4 +1,6 @@
+import 'package:flut/dirs/btn_widget.dart';
 import 'package:flut/dirs/dialog.dart';
+import 'package:flut/dirs/func_sized_box_widget.dart';
 import 'package:flut/dirs/placeholder_widget.dart';
 import 'package:flut/dirs/search_field_widget.dart';
 import 'package:flut/dirs/signup.dart';
@@ -85,6 +87,14 @@ class Metlist extends StatelessWidget {
                 txt2: "Stack",
                 clr2: Colors.brown,
                 link2: StackWidget(),
+              ),
+              CustomRowWidget(
+                txt1: "FunctionallySizedBox",
+                clr1: Colors.amber,
+                link1: FuncSizedBoxWidget(),
+                txt2: "Button",
+                clr2: Colors.blueGrey,
+                link2: BtnWidget(),
               ),
             ],
           ),
